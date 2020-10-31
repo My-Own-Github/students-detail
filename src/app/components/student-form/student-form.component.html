@@ -1,6 +1,6 @@
 <div class="container mt-3">
   <mat-card>
-    <form [formGroup]="studentForm" (ngSubmit)="saveUserData(studentForm)">
+    <form [formGroup]="studentForm" (ngSubmit)="saveStudentData(studentForm)">
       <div>
         <mat-form-field class="example-full-width">
           <mat-label>First Name</mat-label>
@@ -26,8 +26,10 @@
         </mat-form-field>
       </div>
       <div>
-        <button type="submit" mat-raised-button color="primary" class="mr-2 mb-2"> Save </button>
-        <button type="submit" mat-raised-button color="accent" class="mb-2" (click)="goBack()"> Cancel </button>
+        <button type="submit" mat-raised-button color="primary" class="mr-2 mb-2 text-center"> Submit </button>
+      </div>
+      <div *ngIf="studentData">
+        <button type="button"mat-raised-button color="accent" class="mr-2 mb-2 text-right" (click)="goToBack()"> Cancle </button>
       </div>
     </form>
   </mat-card>

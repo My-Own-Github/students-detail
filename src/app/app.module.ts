@@ -16,16 +16,20 @@ import {
   MatCardModule,
   MatButtonModule,
   MatProgressSpinnerModule,
-  MatTableModule
+  MatTableModule,
+  MatAutocompleteModule,
+  MatIconModule
 } from '@angular/material';
 import { StudentServiceService } from './service/student-service.service';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StudentFormComponent,
     StudentsListComponent,
-    StudentEditFormComponent
+    StudentEditFormComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,9 @@ import { StudentServiceService } from './service/student-service.service';
     MatCardModule,
     MatButtonModule,
     MatProgressSpinnerModule,
-    MatTableModule
+    MatTableModule,
+    MatAutocompleteModule,
+    MatIconModule
   ],
   exports: [
     MatFormFieldModule,
@@ -51,7 +57,9 @@ import { StudentServiceService } from './service/student-service.service';
     MatCardModule,
     MatButtonModule,
     MatProgressSpinnerModule,
-    MatTableModule
+    MatTableModule,
+    MatAutocompleteModule,
+    MatIconModule
   ],
   providers: [StudentServiceService],
   bootstrap: [AppComponent]
