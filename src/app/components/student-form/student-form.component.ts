@@ -51,7 +51,7 @@ export class StudentFormComponent implements OnInit {
   }
 
   goToBack(){
-    this.router.navigate(["/studentForm"])
+    this.router.navigate(["studentsList"])
   }
 
 }

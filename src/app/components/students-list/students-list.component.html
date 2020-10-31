@@ -1,29 +1,21 @@
-<div class="fluid-container mt-3">
-  <button type="button"mat-raised-button color="accent" class="mr-2 mb-2 align-right" (click)="openStudentForm()"> Add New Student </button>
-  <table mat-table [dataSource]="studentsList" class="mat-elevation-z8">
-
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
-
-    <!-- Position Column -->
+<div class="container mt-3">
+  <div class="ml-3 mb-2 text-right">
+    <button type="button" mat-raised-button color="accent" (click)="openStudentForm()"> Add
+      New Student </button>
+  </div>
+  <table mat-table [dataSource]="studentsList" class="mat-elevation-z8 mr-5 ml-3">
     <ng-container matColumnDef="firstName">
       <th mat-header-cell *matHeaderCellDef> First Name </th>
       <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
     </ng-container>
-
-    <!-- Name Column -->
     <ng-container matColumnDef="lastName">
       <th mat-header-cell *matHeaderCellDef> Last Name </th>
       <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
     </ng-container>
-
-    <!-- Weight Column -->
     <ng-container matColumnDef="email">
       <th mat-header-cell *matHeaderCellDef> Email </th>
       <td mat-cell *matCellDef="let element"> {{element.email}} </td>
     </ng-container>
-
-    <!-- Symbol Column -->
     <ng-container matColumnDef="mobileNo">
       <th mat-header-cell *matHeaderCellDef> Mobile No </th>
       <td mat-cell *matCellDef="let element"> {{element.mobileNo}} </td>
@@ -31,10 +23,12 @@
     <ng-container matColumnDef="actions">
       <th mat-header-cell *matHeaderCellDef> Actions </th>
       <td mat-cell *matCellDef="let element; let i = index;">
-        <button mat-icon-button color="primary" aria-label="Example icon button with a home icon" (click)="updateStudentDetail(element, i)">
+        <button mat-icon-button color="primary" class="mr-2" aria-label="Example icon button with a home icon"
+          (click)="updateStudentDetail(element, i)">
           <mat-icon>edit</mat-icon>
         </button>
-        <button mat-icon-button color="warn" aria-label="Example icon button with a home icon" (click)="deleteStudentData(i)">
+        <button mat-icon-button color="warn" class="ml-2" aria-label="Example icon button with a home icon"
+          (click)="deleteStudentData(i)">
           <mat-icon>delete</mat-icon>
         </button>
       </td>

@@ -25,6 +25,9 @@ export class StudentsListComponent implements OnInit {
   deleteStudentData(index){
     this.studentServiceService.removedStudentDetail(index);
     this.studentsList = this.studentServiceService.getstudentdetail();
+    if(this.studentsList.length === 0){
+      this.router.navigate(["/studentForm"])
+    }
   }
 
   openStudentForm(){
