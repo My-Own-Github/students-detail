@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StudentFormComponent } from './components/student-form/student-form.component';
 import { StudentsListComponent } from './components/students-list/students-list.component';
-import { StudentEditFormComponent } from './components/student-edit-form/student-edit-form.component';
 import {
   MatFormFieldModule,
   MatInputModule,
@@ -28,7 +27,6 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     AppComponent,
     StudentFormComponent,
     StudentsListComponent,
-    StudentEditFormComponent,
     NavBarComponent
   ],
   imports: [
